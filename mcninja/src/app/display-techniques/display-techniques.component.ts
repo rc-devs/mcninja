@@ -13,6 +13,6 @@ import techniquesArray from '../data/techniques.array';
   standalone: true,
 })
 export class DisplayTechniquesComponent {
- techniques = signal<Technique[]>(/* techniques array */techniquesArray)
+ techniques = signal<Technique[]>(techniquesArray)
 }
 
