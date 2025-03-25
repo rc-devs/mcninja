@@ -3,7 +3,7 @@ import { Technique } from "./techinque.template"
 
 export let techniquesArray = signal<Technique[]>([
   {
-    id: "tan-throw-01",
+    id: "tan01",
     title: "Leg Sweep",
     belt: 'Tan',
     description:
@@ -26,11 +26,11 @@ export let techniquesArray = signal<Technique[]>([
   },
   {
     id: '',
-    title: '',
+    title: 'Front Kick',
     belt: 'Tan',
     description: "",
     proTip: "",
-    video: "",
+    video: `<iframe width="560" height="315" src="https://www.youtube.com/embed/JJdXqRpzp5o?si=ISnypdLCOcAFdi_r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
     mastered: false,
   },
   {
@@ -312,5 +312,5 @@ export let techniquesArray = signal<Technique[]>([
     video: "",
     mastered: false,
   },
-  
+
 ])
