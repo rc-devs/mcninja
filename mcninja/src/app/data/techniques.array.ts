@@ -1,8 +1,6 @@
-import { signal } from "@angular/core"
-import { Technique } from "./techinque.template"
 
-export class TechniquesArray{
-  allTechniques = signal<Technique[]>([
+
+let techniquesArray = [
     {
       id: "tan01",
       title: "Leg Sweep",
@@ -313,5 +311,5 @@ export class TechniquesArray{
       video: "",
       mastered: false,
     },
-  ])
-}
+  ]
+  export default techniquesArray;
