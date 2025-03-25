@@ -20,6 +20,7 @@ export let techniquesArray = signal<Technique[]>([
       <li>(8) Rapidly return to the basic warrior stance.</li>
     </ol>
     `,
+  proTip:"Ensure calf on calf contact is being made. In a combative engagement contact will be made with the cutting edge of your heel on the aggressor’s Achilles tendon.",
   video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/6dBm98BHzo8?si=ev5rtn8l97CVs6sJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
   mastered: false,
   },
