@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { techniquesArray } from '../data/techniques.array';
 
 @Component({
   selector: 'app-display-techniques',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   templateUrl: './display-techniques.component.html',
   styleUrl: './display-techniques.component.css'
 })
+
+techniquesArray();
+
 export class DisplayTechniquesComponent {
 
 }
