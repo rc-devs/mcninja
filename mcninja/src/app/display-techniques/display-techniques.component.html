@@ -1,9 +1,9 @@
-@for (technique of techniquesArray(); track technique.id) {
+@for (technique of techniques(); track technique.id) {
   <h3>{{technique.title}}</h3>
   <p>The {{technique.title}} is a {{technique.belt}} Belt technique</p>
   <p>Technique Execution</p>
   <span>{{technique.description}}</span>
   <p>Pro-tip: {{technique.proTip}}</p>
-  <p>{{Video}}</p>
+  <p>{{technique.video}}</p>
   <p>Mastered? {{technique.mastered}}</p> <!-- use @if directive? -->
 }
