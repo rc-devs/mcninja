@@ -1,4 +1,5 @@
 //default export at very bottom of array
+//need to import DomSanitizer for youtube embeds? URL issue?
 
 let techniquesArray = [
     {
