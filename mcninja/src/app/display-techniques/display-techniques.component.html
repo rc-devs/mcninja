@@ -6,6 +6,6 @@
       <div [innerHTML]="technique.execution"></div>
       <p><b>Pro-tip:</b> {{technique.proTip}}</p>
       <div [innerHTML]="technique.video"></div> <!-- need dom sanitizer? -->
-      <p><b>Mastered?</b> {{technique.mastered}}</p> <!-- use @if directive? -->
+      <p><b>Mastered?</b> {{technique.mastered}} <button (click)="toggleMastered()">Toggle Mastered</button></p> <!-- use @if directive? Do not need to display mastered property; use it for toggle -->
   </div>
 }
