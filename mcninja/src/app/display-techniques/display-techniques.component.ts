@@ -3,8 +3,6 @@ import { Technique } from '../data/techinque.template';
 import techniquesArray from '../data/techniques.array';
 
 
-
-
 @Component({
   selector: 'app-display-techniques',
   imports: [],
