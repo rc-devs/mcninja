@@ -1,7 +1,3 @@
-//default export at very bottom of array
-//using default export and assigning as variable makes the template useless...
-//need to import DomSanitizer for youtube embeds? URL issue?
-
 export default [
     {
       id: 't1',
@@ -10,7 +6,7 @@ export default [
       description: "The lead hand punch is a snapping straight punch executed by the forward or lead hand. It is a fast, unexpected punch designed to stun an aggressor and to set up for a follow-on techniques. A lead hand punch conceals movement and allows you to get close to the aggressor.",
       execution: ["Assume the basic warrior stance.", "Snap your lead hand out to nearly full extension, while rotating your palm to the deck.", "Keep your rear hand in place to protect your head.", "Rapidly retract to the basic warrior stance."],
       proTip: "A common mistake is to pull the fist back low, leaving you open to a counter attack. Ensure you do not hyperextend your elbows",
-      video: `<iframe width="560" height="315" src="https://www.youtube.com/embed/8Oxwfhd_L0Q?si=ggknHEo16ij2KbMT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+      video: ,
       mastered: false,
     },
     {
@@ -24,7 +20,12 @@ export default [
         "Keep your lead hand in place to protect your head.",
         "Rapidly retract to the basic warrior stance.",],
       proTip: "A common mistake is to pull the fist back low, leaving you open to a counter attack. Ensure you do not hyperextend your elbows",
-      video: `<iframe width="560" height="315" src="https://www.youtube.com/embed/ofil5E5lPCY?si=vci54z7U6Vb-NFcL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+      video: {
+        title: "YouTube video player",
+        width: 560,
+        height: 315,
+        url: "",
+      },
       mastered: false,
     },
     {
@@ -38,7 +39,12 @@ export default [
          " Rapidly retract to the basic warrior stance.",
         ],
       proTip: "A common mistake is to drop the fist to the waist in an attempt to generate more power. Power is generated from the correct use of the lower body.",
-      video: `<iframe width="560" height="315" src="https://www.youtube.com/embed/5LXsw2VfrOg?si=YFUX3n1gZehr2fvi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+      video: {
+        title: "YouTube video player",
+        width: 560,
+        height: 315,
+        url: "https://www.youtube.com/embed/5LXsw2VfrOg?si=YFUX3n1gZehr2fvi",
+      },
       mastered: false,
     },
     {
@@ -51,7 +57,12 @@ export default [
         " Power is generated from side to side by driving with your legs and rotating your hips and shoulders. Your body’srotation drives the fist through your target area as your lead hand stays up and in place to protect your head.",
         " Rapidly retract to the basic warrior stance.",],
         proTip: "A common mistake is to reach or extend the fist all the way out in an attempt to generate more power. Power is generated from the rotation of the hips and shoulders.",
-        video: `<iframe width="560" height="315" src="https://www.youtube.com/embed/_nCUoFrqibk?si=CLu3yeW1XYfNr4w9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+      video: {
+        title: "YouTube video player",
+        width: 560,
+        height: 315,
+        url: "https://www.youtube.com/embed/_nCUoFrqibk?si=CLu3yeW1XYfNr4w9",
+      },
       mastered: false,
     },
     {
@@ -64,7 +75,12 @@ export default [
         "Thrust your hand at the aggressor's nose level so your fingers can slide naturally into the grooves of their eye sockets.",
         "Return to the basic warrior stance.",],
       proTip: "",
-      video: `<iframe width="560" height="315" src="https://www.youtube.com/embed/AZvW31qC4vc?si=mcnYpG_JZWXsyAjj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+      video: {
+        title: "YouTube video player",
+        width: 560,
+        height: 315,
+        url: "https://www.youtube.com/embed/AZvW31qC4vc?si=mcnYpG_JZWXsyAjj",
+      },
       mastered: false,
     },
     {
@@ -77,7 +93,12 @@ export default [
         "Follow through the target area with your fist.",
         "Return to the basic warrior stance.",],
       proTip: "",
-      video: `<iframe width="560" height="315" src="https://www.youtube.com/embed/o8eqizg-IFw?si=7O_gj8u3VaTvM6Mz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+      video: {
+        title: "YouTube video player",
+        width: 560,
+        height: 315,
+        url: "https://www.youtube.com/embed/o8eqizg-IFw?si=7O_gj8u3VaTvM6Mz",
+      },
       mastered: false,
     },
     {
@@ -92,7 +113,12 @@ export default [
 
 
       proTip: "",
-      video: `<iframe width="560" height="315" src="https://www.youtube.com/embed/iEfiIQC1NQA?si=svXoE3sLbqjm3mI9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+      video: {
+        title: "YouTube video player",
+        width: 560,
+        height: 315,
+        url: "https://www.youtube.com/embed/iEfiIQC1NQA?si=svXoE3sLbqjm3mI9",
+      },
       mastered: false,
       },
     {
@@ -106,7 +132,12 @@ export default [
         "Make contact on the aggressor with your right forearm two inches above the point of the elbow.",
         "Return to the basic warrior stance.",],
       proTip: "",
-      video: `<iframe width="560" height="315" src="https://www.youtube.com/embed/74pmwIZcn10?si=rSEZrLW1SvRZekJV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+      video: {
+        title: "YouTube video player",
+        width: 560,
+        height: 315,
+        url: "https://www.youtube.com/embed/74pmwIZcn10?si=rSEZrLW1SvRZekJV",
+      },
       mastered: false,
     },
     {
@@ -120,7 +151,12 @@ export default [
         "Rotate your right shoulder and hip forward to generate power.",
         "Return to the basic warrior stance.",],
       proTip: "",
-      video: `<iframe width="560" height="315" src="https://www.youtube.com/embed/xHrDVdlzV08?si=cnxzU9b5YkHGZqi9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+      video: {
+        title: "YouTube video player",
+        width: 560,
+        height: 315,
+        url: "https://www.youtube.com/embed/xHrDVdlzV08?si=cnxzU9b5YkHGZqi9",
+      },
       mastered: false,
     },
     {
@@ -135,10 +171,13 @@ export default [
         "Exert pressure with your right biceps and radius bone on the aggressor’s carotid arteries, on both sides of the neck.",
         "Maintain pressure on both sides of the neck and draw the aggressor closer to you by pulling your right arm in.",
         "To increase the effectiveness of the choke, apply forward pressure to the back of the aggressor's head with your head.",],
-
-
       proTip: "If the aggressor is taller than you, step or push on the back of the aggressor's knee with your foot. This will off-balance the aggressor, causing him to bend at the knees and fall forward.",
-      video: `<iframe width="560" height="315" src="https://www.youtube.com/embed/LQqpWmQ01SI?si=nwW-DcVAubUvKucw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+      video: {
+        title: "YouTube video player",
+        width: 560,
+        height: 315,
+        url: "https://www.youtube.com/embed/LQqpWmQ01SI?si=nwW-DcVAubUvKucw",
+      },
       mastered: false,
     },
     {
@@ -151,7 +190,12 @@ export default [
         "Push the aggressor's head forward and down with your left hand, keeping your elbows in.",
         "Draw your right arm in, maintaining pressure with your biceps and forearm on both sides of the aggressor's neck.",],
       proTip: "If the aggressor is taller than you, step or push on the back of the aggressor's knee with your foot. This will off-balance the aggressor, causing him to bend at the knees and fall forward.",
-      video: `<iframe width="560" height="315" src="https://www.youtube.com/embed/dpHo0zG93mY?si=4GmmJ2zaLUBeEt3s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+      video: {
+        title: "YouTube video player",
+        width: 560,
+        height: 315,
+        url: "https://www.youtube.com/embed/dpHo0zG93mY?si=4GmmJ2zaLUBeEt3s",
+      },
       mastered: false,
     },
     {
@@ -168,7 +212,12 @@ export default [
           "Drive the aggressor to the deck by bending at the waist, and following through his leg with the sweep. Release your grip on the aggressor's shoulder in order to maintain your balance.",
           "Rapidly return to the basic warrior stance.",],
       proTip:"Ensure calf on calf contact is being made. In a combative engagement contact will be made with the cutting edge of your heel on the aggressor’s Achilles tendon.",
-      video: `<iframe width="560" height="315" src="https://www.youtube.com/embed/6dBm98BHzo8?si=ev5rtn8l97CVs6sJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+      video: {
+        title: "YouTube video player",
+        width: 560,
+        height: 315,
+        url: "https://www.youtube.com/embed/6dBm98BHzo8?si=ev5rtn8l97CVs6sJ",
+      },
       mastered: false,
     },
     {
@@ -180,10 +229,13 @@ export default [
           "Never extend your foot above waist high, and keep in mind it is difficult to change the direction of a kick after it is initiated.",
           "Make contact on the aggressor with the toe of your right boot or bootlaces.",
           "Follow through the target with your foot and rapidly retract to the basic warrior stance.",],
-
-
       proTip: "",
-      video: `<iframe width="560" height="315" src="https://www.youtube.com/embed/JJdXqRpzp5o?si=ISnypdLCOcAFdi_r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+      video: {
+        title: "YouTube video player",
+        width: 560,
+        height: 315,
+        url: "https://www.youtube.com/embed/K_JpSishBiI?si=Q95JYAvmgiW1mwSE",
+      },
       mastered: false,
     },
     {
@@ -196,7 +248,12 @@ export default [
         "Make contact on the aggressor with the shin of the right leg or the top of the foot.",
         "Follow through the target with your foot and rapidly retract to the basic warrior stance.",],
       proTip: "",
-      video: `<iframe width="560" height="315" src="https://www.youtube.com/embed/R1x5rcb7aUA?si=Dajj3_DSsFHhIrTW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+      video: {
+        title: "YouTube video player",
+        width: 560,
+        height: 315,
+        url: "https://www.youtube.com/embed/K_JpSishBiI?si=Q95JYAvmgiW1mwSE",
+      },
       mastered: false,
     },
     {
@@ -209,7 +266,12 @@ export default [
         "At the same time, bend your left knee slightly to drop your body weight into the strike.",
         "Rapidly retract to the basic warrior stance.",],
       proTip: "",
-      video: `<iframe width="560" height="315" src="https://www.youtube.com/embed/K_JpSishBiI?si=Q95JYAvmgiW1mwSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+      video: {
+        title: "YouTube video player",
+        width: 560,
+        height: 315,
+        url: "https://www.youtube.com/embed/K_JpSishBiI?si=Q95JYAvmgiW1mwSE",
+      },
       mastered: false,
     },
     {
@@ -221,7 +283,12 @@ export default [
         "Pull the aggressor down and at the same time raise your right knee driving it up forcefully into the aggressor. Power is generated by pulling the aggressor down and thrusting the leg upward with your hips.",
         "Follow through the target with your knee and rapidly retract to the basic warrior stance.",],
       proTip: "",
-      video: `<iframe width="560" height="315" src="https://www.youtube.com/embed/ZaRTJZwXorI?si=4cpuIpwKyyG5tqbq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>,`,
+      video: {
+        title: "YouTube video player",
+        width: 560,
+        height: 315,
+        url: "https://www.youtube.com/embed/ZaRTJZwXorI?si=4cpuIpwKyyG5tqbq",
+      },
       mastered: false,
     },
   ]
