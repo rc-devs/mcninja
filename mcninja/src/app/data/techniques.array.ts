@@ -27,11 +27,11 @@ let techniquesArray = [
       execution: `
       <p>The rear hand punch is a snapping punch executed by the rear hand. It is a power punch designed to inflict maximum damage on your aggressor. Its power comes from pushing off your rear leg and rotating your hips and shoulders.</p>
         <ol>
-           Assume the basic warrior stance.</li>
-           Forcefully rotate your hips and shoulders toward the aggressor and thrust your rear hand straight out, palm down, to nearly full extension.</li>
-           Shift your body weight to your lead foot while pushing off on the ball of your rear foot.</li>
-           Keep your lead hand in place to protect your head.</li>
-           Rapidly retract to the basic warrior stance.</li>
+           <li>Assume the basic warrior stance.</li>
+           <li>Forcefully rotate your hips and shoulders toward the aggressor and thrust your rear hand straight out, palm down, to nearly full extension.</li>
+           <li>Shift your body weight to your lead foot while pushing off on the ball of your rear foot.</li>
+           <li>Keep your lead hand in place to protect your head.</li>
+           <li>Rapidly retract to the basic warrior stance.</li>
         </ol>
       `,
       proTip: "A common mistake is to pull the fist back low, leaving you open to a counter attack. Ensure you do not hyperextend your elbows",

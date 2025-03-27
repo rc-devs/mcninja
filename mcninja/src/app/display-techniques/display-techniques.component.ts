@@ -16,6 +16,7 @@ export class DisplayTechniquesComponent {
 
  toggleMastered(){
   console.log('tiggle toggle')
+  
  }
 }
 
