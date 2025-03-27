@@ -2,7 +2,7 @@
 //using default export and assigning as variable makes the template useless...
 //need to import DomSanitizer for youtube embeds? URL issue?
 
-let techniquesArray = [
+export default [
     {
       id: 't1',
       title: 'Lead Hand Punch',
@@ -282,4 +282,4 @@ let techniquesArray = [
   ]
 
 
-export default techniquesArray;
+
