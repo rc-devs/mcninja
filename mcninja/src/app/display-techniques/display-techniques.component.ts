@@ -15,8 +15,9 @@ export class DisplayTechniquesComponent {
  techniques = signal<Technique[]>(techniquesArray)
 
  toggleMastered(mastered:boolean){
-console.log(mastered)
 //changes bool passed as parameter, but does not update the array
+  console.log(mastered)
+
   if(mastered) {
     mastered = false;
     console.log(mastered)
