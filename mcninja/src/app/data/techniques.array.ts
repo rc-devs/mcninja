@@ -6,7 +6,12 @@ export default [
       description: "The lead hand punch is a snapping straight punch executed by the forward or lead hand. It is a fast, unexpected punch designed to stun an aggressor and to set up for a follow-on techniques. A lead hand punch conceals movement and allows you to get close to the aggressor.",
       execution: ["Assume the basic warrior stance.", "Snap your lead hand out to nearly full extension, while rotating your palm to the deck.", "Keep your rear hand in place to protect your head.", "Rapidly retract to the basic warrior stance."],
       proTip: "A common mistake is to pull the fist back low, leaving you open to a counter attack. Ensure you do not hyperextend your elbows",
-      video: ,
+      video: {
+        title: "YouTube video player",
+        width: 560,
+        height: 315,
+        url: "https://youtu.be/8Oxwfhd_L0Q?feature=shared",
+      },
       mastered: false,
     },
     {
@@ -24,7 +29,7 @@ export default [
         title: "YouTube video player",
         width: 560,
         height: 315,
-        url: "",
+        url: "https://youtu.be/ofil5E5lPCY?feature=shared",
       },
       mastered: false,
     },
