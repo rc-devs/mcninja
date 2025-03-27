@@ -8,12 +8,11 @@
      <!--  <div [innerHTML]="technique.video"></div> --> <!-- need dom sanitizer? too many errors -->
       <p><b>Mastered?</b>
       @if (!technique.mastered){
-        <p>You have not mastered {{technique.title}}</p>
+        <p>You have not mastered the {{technique.title}}</p>
       } @else {
         <p>You have mastered {{technique.title}}</p>
       }
-      <button (click)="toggleMastered()">Toggle Mastered</button></p>
-      <!-- use @if directive? Do not need to display mastered property; use it for toggle -->
+      <button (click)="toggleMastered(technique.mastered)">Toggle Mastered</button></p>
   </div>
 }
 
