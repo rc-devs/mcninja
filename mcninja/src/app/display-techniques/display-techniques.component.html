@@ -3,9 +3,10 @@
     <h3>{{technique.title}}</h3>
       <p>The {{technique.title}} is a {{technique.belt}} Belt technique</p>
       <p><b>Technique Execution</b></p>
-      <div [innerHTML]="technique.execution"></div>
+      <div [innerHTML]="technique.description"></div>
+      <!-- technique.execution (loop over) -->
       <p><b>Pro-tip:</b> {{technique.proTip}}</p>
-     <!--  <div [innerHTML]="technique.video"></div> --> <!-- need dom sanitizer? too many errors -->
+      <!-- <iframe [src]="technique.video" ></iframe> -->
       <p><b>Mastered?</b>
       @if (!technique.mastered){
         <p>You have not mastered the {{technique.title}}</p>
@@ -18,4 +19,4 @@
 
 <a href="#">Back to Top</a>
 
-<iframe src="https://www.youtube.com/embed/8Oxwfhd_L0Q?si=ggknHEo16ij2KbMT" allow="autoplay; encrypted-media" ></iframe>
+
