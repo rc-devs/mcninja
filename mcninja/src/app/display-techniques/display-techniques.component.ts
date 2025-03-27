@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { Technique } from '../data/techinque.template';
+import { Technique } from '../data/techinque.model';
 import techniquesArray from '../data/techniques.array';
 import { FormsModule } from '@angular/forms';
 

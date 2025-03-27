@@ -1,6 +1,6 @@
 import { Injectable, signal } from '@angular/core';
 import DUMMY_DATA from '../data/techniques.array' //default export so can be named anything!!
-import { Technique } from '../data/techinque.template';
+import { Technique } from '../data/techinque.model';
 
 @Injectable({
   providedIn: 'root'
