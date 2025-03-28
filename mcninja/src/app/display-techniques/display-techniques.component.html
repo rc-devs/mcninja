@@ -2,18 +2,23 @@
   <div class="technique-container">
     <h3>{{technique.title}}</h3>
       <p>The {{technique.title}} is a {{technique.belt}} Belt technique</p>
-      <p><b>Technique Execution</b></p>
-      <div [innerHTML]="technique.description"></div>
-      <!-- technique.execution (loop over) -->
-      <p><b>Pro-tip:</b> {{technique.proTip}}</p>
+      <h4>Technique Execution</h4>
+        <p>{{technique.description}}</p>
+        <div class="execution-container">
+          @for (t of techniques(); track t.id) {
+                  <li> {{t.execution}} </li>
+              }
+        </div>
+      <h4>Pro-tip:</h4>
+        <p>{{technique.proTip}}</p>
       <!-- <iframe [src]="technique.video" ></iframe> -->
-      <p><b>Mastered?</b>
+      <h4>Mastered?</h4>
       @if (!technique.mastered){
         <p>You have not mastered the {{technique.title}}</p>
       } @else {
         <p>You have mastered {{technique.title}}</p>
       }
-      <button (click)="toggleMastered(technique.mastered)">Toggle Mastered</button></p>
+      <button (click)="toggleMastered(technique.mastered)">Toggle Mastered</button>
   </div>
 }
 
