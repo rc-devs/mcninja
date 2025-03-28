@@ -14,9 +14,10 @@ export class DisplayTechniquesComponent {
   technique = inject(TechniqueService) //technique signal for dynamic use in html
 
 //toggle mastered for dynamic update of html
- toggleMastered(mastered:boolean){
+ toggleMastered(mastered:boolean, techniqueId:string){
 //changes bool passed as parameter, but does not update the array
   console.log(mastered)
+  console.log(techniqueId)
 
   if(mastered) {
     mastered = false;
