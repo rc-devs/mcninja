@@ -5,9 +5,9 @@
       <h4>Technique Execution</h4>
         <p>{{technique.description}}</p>
         <div class="execution-container">
-          @for (t of techniques(); track t.id) {
-                  <li> {{t.execution}} </li>
-              }
+          @for (e of technique.execution; track e) {
+            <li> {{e}} </li>
+        }
         </div>
       <h4>Pro-tip:</h4>
         <p>{{technique.proTip}}</p>
