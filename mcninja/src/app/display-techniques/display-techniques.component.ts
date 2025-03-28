@@ -1,7 +1,6 @@
-import { Component, signal } from '@angular/core';
-import { Technique } from '../data/techinque.model';
-import techniquesArray from '../data/techniques.array';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { TechniqueService } from '../shared/technique.service';
 
 
 @Component({
@@ -12,7 +11,7 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
 })
 export class DisplayTechniquesComponent {
-  techniques = signal<Technique[]>(techniquesArray) //technique signal for dynamic use in html
+  technique = inject(TechniqueService) //technique signal for dynamic use in html
 
 //toggle mastered for dynamic update of html
  toggleMastered(mastered:boolean){
