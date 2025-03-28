@@ -5,7 +5,7 @@
       <h4>Technique Execution</h4>
         <p>{{technique.description}}</p>
         <div class="execution-container">
-          @for (e of technique.execution; track e) {
+          @for (e of technique.execution; track e) { <!-- loop over execution:[] -->
             <li> {{e}} </li>
         }
         </div>
@@ -13,11 +13,11 @@
         <p>{{technique.proTip}}</p>
       <!-- <iframe [src]="technique.video" ></iframe> -->
       <h4>Mastered?</h4>
-      @if (!technique.mastered){
-        <p>You have not mastered the {{technique.title}}</p>
-      } @else {
-        <p>You have mastered {{technique.title}}</p>
-      }
+        @if (!technique.mastered){
+          <p>You have not mastered the {{technique.title}}</p>
+        } @else {
+          <p>You have mastered {{technique.title}}</p>
+        }
       <button (click)="toggleMastered(technique.mastered)">Toggle Mastered</button>
   </div>
 }
