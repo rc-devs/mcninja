@@ -7,7 +7,7 @@
         <div class="execution-container">
           @for (e of tech.execution; track e) { <!-- loop over execution:[] -->
             <li> {{e}} </li>
-        }
+          }
         </div>
       <h4>Pro-tip:</h4>
         <p>{{tech.proTip}}</p>
@@ -19,6 +19,8 @@
           <p>You have mastered {{tech.title}}</p>
         }
       <button (click)="toggleMastered(tech.mastered, tech.id)">Toggle Mastered</button>
+      <button (click)="setMastered()">Mastered</button>
+      <button (click)="setNotMastered()">Not Mastered</button>
   </div>
 }
 

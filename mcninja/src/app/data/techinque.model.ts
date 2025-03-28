@@ -9,6 +9,6 @@ export interface Technique {
   description: string,
   execution: string[],
   proTip: string,
-  video: Video
+  video: Video,
   mastered: boolean,
 }

@@ -13,23 +13,36 @@ import { TechniqueService } from '../shared/technique.service';
 export class DisplayTechniquesComponent {
   technique = inject(TechniqueService) //technique signal for dynamic use in html
 
-//toggle mastered for dynamic update of html
- toggleMastered(mastered:boolean, techniqueId:string){
-//changes bool passed as parameter, but does not update the array
-  console.log(mastered)
-  console.log(techniqueId)
 
-  if(mastered) {
-    mastered = false;
-    console.log(mastered)
-    return mastered = false;
-  } else if (!mastered){
-    mastered= true;
-    console.log(mastered)
-    return mastered= true;
+
+
+
+
+
+//toggle mastered for dynamic update of html
+ toggleMastered(masteredValue:boolean, techniqueId:string){
+  //probably just use .find(techniqueId)
+
+  let index = 1 + (this.technique.techniques().reduce((accumulator, current, currentIndex) => {
+    if (current.id === techniqueId) {
+      return currentIndex;
+      }
+      return accumulator;
+    }, -1));
+
+    let strungIndex = index.toString()
+    if (techniqueId == 't'+strungIndex){
+      console.log('match')
+      console.log(techniqueId, 't'+strungIndex)
+    } else {
+      console.log('no match')
+      console.log(techniqueId, 't'+strungIndex)
+    }
+
   }
-  return mastered;
- }
+
 
 }
+
+
 
