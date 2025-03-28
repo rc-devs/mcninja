@@ -11,8 +11,8 @@
         </div>
       <h4>Pro-tip:</h4>
         <p>{{technique.proTip}}</p>
-      <!-- <iframe [src]="technique.video" ></iframe> -->
-      <h4>Mastered?</h4>
+      <h4>Video Reference</h4>
+       <!--  <iframe [src]="technique.video.url" allow="autoplay; encrypted-media"></iframe> -->
         @if (!technique.mastered){
           <p>You have not mastered the {{technique.title}}</p>
         } @else {

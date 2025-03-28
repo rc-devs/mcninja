@@ -12,8 +12,9 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
 })
 export class DisplayTechniquesComponent {
- techniques = signal<Technique[]>(techniquesArray)
+  techniques = signal<Technique[]>(techniquesArray) //technique signal for dynamic use in html
 
+//toggle mastered for dynamic update of html
  toggleMastered(mastered:boolean){
 //changes bool passed as parameter, but does not update the array
   console.log(mastered)
@@ -27,12 +28,8 @@ export class DisplayTechniquesComponent {
     console.log(mastered)
     return mastered= true;
   }
-
   return mastered;
-
-
-
-
  }
+
 }
 
