@@ -13,14 +13,15 @@
         <p>{{tech.proTip}}</p>
       <h4>Video Reference</h4>
        <!--  <iframe [src]="tech.video.url" allow="autoplay; encrypted-media"></iframe> -->
+
+       <h4>Proficiency</h4>
         @if (!tech.mastered){
           <p>You have not mastered the {{tech.title}}</p>
         } @else {
           <p>You have mastered {{tech.title}}</p>
         }
+
       <button (click)="toggleMastered(tech.mastered, tech.id)">Toggle Mastered</button>
-      <button (click)="setMastered()">Mastered</button>
-      <button (click)="setNotMastered()">Not Mastered</button>
   </div>
 }
 
