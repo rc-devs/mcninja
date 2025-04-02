@@ -15,21 +15,19 @@ export class DisplayTechniquesComponent {
 
   techniques = this.techniqueService.getTechniques()
 
-  masteredArray = signal<[]>([])
-
   toggleTechnique(id: string){
     //this.techniqueService.update(l => l.filter(t => t.id !== id))
   }
 
 
   addToMastered(techniqueObject:{}){ //trying to push object to master array
-    console.log(this.masteredArray)
+
     console.log(techniqueObject)
     //this.masteredArray.push(techniqueObject)
   }
 
   removeFromMastered(techniqueObject: {}){
-    console.log(this.masteredArray)
+
     console.log(techniqueObject)
   }
 
