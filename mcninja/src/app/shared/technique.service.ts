@@ -9,4 +9,9 @@ import techniquesArray from '../data/techniques.array'; //default export so can 
 export class TechniqueService {
 techniques = signal<Technique[]>(techniquesArray)
 
+getTechniques(){
+  return this.techniques;
+}
+
+
 }

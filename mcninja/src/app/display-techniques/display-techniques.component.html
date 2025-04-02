@@ -1,4 +1,4 @@
-@for (tech of technique.techniques(); track tech.id) {
+@for (tech of techniques(); track tech.id) {
   <div class="technique-container">
     <h3>{{tech.title}}</h3>
       <p>The {{tech.title}} is a {{tech.belt}} Belt technique</p>
@@ -21,7 +21,8 @@
           <p>You have mastered {{tech.title}}</p>
         }
 
-      <button (click)="toggleMastered(tech.mastered, tech.id)">Toggle Mastered</button>
+      <button (click)="addToMastered(techniques())">Mastered</button>
+      <button (click)="removeFromMastered(techniques())">Not Mastered</button>
   </div>
 }
 
