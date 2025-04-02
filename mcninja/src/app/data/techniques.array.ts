@@ -31,7 +31,7 @@ export default [
         height: 315,
         url: "https://youtu.be/ofil5E5lPCY?feature=shared",
       },
-      mastered: false,
+      mastered: true,
     },
     {
       id: 't3',

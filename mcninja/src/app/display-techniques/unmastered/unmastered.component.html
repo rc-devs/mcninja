@@ -1,0 +1,7 @@
+<h4>Not Mastered</h4>
+@for (tech of techniques(); track tech.id) {
+  @if (!tech.mastered){
+    <p>You have not mastered the {{tech.title}}</p>
+  }
+}
+<hr>
