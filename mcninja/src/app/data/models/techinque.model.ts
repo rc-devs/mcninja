@@ -2,6 +2,8 @@
 
 import { Video } from "./video.model";
 
+
+
 export interface Technique {
   id: string,
   title: string,

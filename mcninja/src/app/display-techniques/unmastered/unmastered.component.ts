@@ -1,6 +1,7 @@
 import { Component, signal } from '@angular/core';
-import { Technique } from '../../data/techinque.model';
+
 import techniquesArray from '../../data/techniques.array';
+import { Technique } from '../../data/models/techinque.model';
 
 @Component({
   selector: 'app-unmastered',

@@ -1,7 +1,7 @@
 import { Injectable, signal } from '@angular/core';
 
-import { Technique } from '../data/techinque.model';
 import techniquesArray from '../data/techniques.array'; //default export so can be named anything!!
+import { Technique } from '../data/models/techinque.model';
 
 @Injectable({
   providedIn: 'root'
