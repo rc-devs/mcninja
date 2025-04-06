@@ -1,0 +1,6 @@
+@for (tech of techniques(); track tech.id) {
+    <p>{{tech.title}}</p>
+
+      <button (click)="addToMastered()">Mastered</button>
+      <button (click)="removeFromMastered()">Not Mastered</button>
+}

@@ -12,7 +12,7 @@ export default [
         height: 315,
         url: "https://youtu.be/8Oxwfhd_L0Q?feature=shared",
       },
-      mastered: true,
+      mastered: false,
     },
     {
       id: 't2',
@@ -31,7 +31,7 @@ export default [
         height: 315,
         url: "https://youtu.be/ofil5E5lPCY?feature=shared",
       },
-      mastered: true,
+      mastered: false,
     },
     {
       id: 't3',
@@ -50,7 +50,7 @@ export default [
         height: 315,
         url: "https://www.youtube.com/embed/5LXsw2VfrOg?si=YFUX3n1gZehr2fvi",
       },
-      mastered: true,
+      mastered: false,
     },
     {
       id: 't4',

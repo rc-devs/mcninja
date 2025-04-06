@@ -1,0 +1,29 @@
+
+@for (tech of techniques(); track tech.id) {
+  <div class="technique-container">
+    <h3>{{tech.title}}</h3>
+      <p>The {{tech.title}} is a {{tech.belt}} Belt technique</p>
+      <h4>Technique Execution</h4>
+        <p>{{tech.description}}</p>
+        <div class="execution-container">
+          @for (e of tech.execution; track e) { <!-- loop over execution:[] -->
+            <li> {{e}} </li>
+          }
+        </div>
+      <h4>Pro-tip:</h4>
+        <p>{{tech.proTip}}</p>
+      <h4>Video Reference</h4>
+       <!--  <iframe [src]="tech.video.url" allow="autoplay; encrypted-media"></iframe> -->
+
+       <h4>Proficiency</h4>
+        @if (!tech.mastered){
+          <p>You have not mastered the {{tech.title}}</p>
+        } @else {
+          <p>You have mastered {{tech.title}}</p>
+        }
+
+      <button (click)="addToMastered(techniques())">Mastered</button>
+      <button (click)="removeFromMastered(techniques())">Not Mastered</button>
+  </div>
+}
+
