@@ -22,7 +22,7 @@ export default<Exercise[]>[
   {
     id: 'e4',
     form: 'Plank',
-    iteration: 10,
+    iteration: 1,
     duration: 30,
   },
 ]
