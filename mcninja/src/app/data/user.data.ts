@@ -1,6 +1,7 @@
 import { Technique } from "./models/techinque.model";
+import { User } from "./models/user.model";
 
-export default [
+export default <User[]> [
   {
     id: 'u1',
     nameFirst: 'Ya ',
