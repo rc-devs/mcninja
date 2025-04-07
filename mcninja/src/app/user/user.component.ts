@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, Input, signal } from '@angular/core';
 import { User } from '../data/models/user.model';
 import userData from '../data/user.data';
 import { ExercisesComponent } from '../exercises/exercises.component';
@@ -11,4 +11,9 @@ import { ExercisesComponent } from '../exercises/exercises.component';
 })
 export class UserComponent {
  users = signal<User[]>(userData)
+
+ onClick(exercises:any ){
+  console.log(exercises)
+  console.log(typeof exercises)
+ }
 }

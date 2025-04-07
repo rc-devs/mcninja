@@ -9,5 +9,6 @@ import exercisesData from '../data/exercises.data';
   styleUrl: './exercises.component.css'
 })
 export class ExercisesComponent {
- exercises = signal<Exercise[]>(exercisesData)
+ //exercises = signal<Exercise[]>(exercisesData)
+ exercises = signal(exercisesData)
 }
