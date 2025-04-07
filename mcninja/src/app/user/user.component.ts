@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { User } from '../data/models/user.model';
 import userData from '../data/user.data';
+import { ExercisesComponent } from '../exercises/exercises.component';
 
 @Component({
   selector: 'app-user',
-  imports: [],
+  imports: [ExercisesComponent],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css'
 })
