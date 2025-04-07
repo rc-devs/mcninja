@@ -10,6 +10,12 @@ import techniquesArray from '../../data/techniques.array';
 })
 export class ByTitleComponent {
   techniques = signal<Technique[]>(techniquesArray)
+  display = ''
+
+  displayDescription(){
+
+
+  }
 
   addToMastered(){
 
