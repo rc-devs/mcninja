@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import exercisesData from '../../data/exercises.data';
 
 @Component({
   selector: 'app-add-exercise',
@@ -7,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrl: './add-exercise.component.css'
 })
 export class AddExerciseComponent {
+  exercises = signal(exercisesData)
 
+  addExerciseHandler(name:string, iteration:number, duration:number){
+    //add new object to exercisesData array
+    /* this.exercises.push({
+      id: 'test test test',
+      name:
+    }) */
+
+    //reset form
+
+  }
 }
