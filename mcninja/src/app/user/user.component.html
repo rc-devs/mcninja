@@ -4,8 +4,10 @@
   <p>Name: {{u.nameFirst}} {{u.nameLast}}</p>
   <p>Mastered Techniques: {{u.userMastered}}</p>
   <p>Remaining Techniques to master: {{u.userNotMastered}}</p>
-  <p>User Exercises</p>
-  <p>{{u.userExercises}}</p><!-- need to loop over? -->
+  <button (click)="displayExercises(u.userExercises)">User Exercises</button>
+  @for (e of userEx(); track e.id){
+
+  }
 <hr>
 
 }

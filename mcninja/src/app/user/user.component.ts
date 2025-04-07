@@ -10,5 +10,10 @@ import userData from '../data/user.data';
 })
 export class UserComponent {
  users = signal<User[]>(userData)
+ userEx = signal({})
+
+ displayExercises(exercises: any){
+  this.userEx = exercises
+ }
 
 }
