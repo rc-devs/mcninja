@@ -1,3 +1,4 @@
+import exercisesData from "./exercises.data";
 import { Technique } from "./models/techinque.model";
 import { User } from "./models/user.model";
 
@@ -9,6 +10,7 @@ export default <User[]> [
     email: 'ya_mum@yafamily.com',
     userMastered: <Technique[]>[],
     userNotMastered: <Technique[]>[],
+    userExercises: exercisesData,
   },
   {
     id: 'u2',
@@ -17,6 +19,7 @@ export default <User[]> [
     email: 'ya_dad@yafamily.com',
     userMastered: <Technique[]>[],
     userNotMastered: <Technique[]>[],
+    userExercises: exercisesData,
   },
   {
     id: 'u3',
@@ -25,5 +28,6 @@ export default <User[]> [
     email: 'ya_dog@yafamily.com',
     userMastered: <Technique[]>[],
     userNotMastered: <Technique[]>[],
+    userExercises: exercisesData,
   },
 ]
