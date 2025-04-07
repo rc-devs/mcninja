@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { User } from '../data/models/user.model';
+import userData from '../data/user.data';
 
 @Component({
   selector: 'app-user',
@@ -7,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-
+ users = signal<User[]>(userData)
 }

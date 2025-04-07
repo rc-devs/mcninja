@@ -1,6 +1,6 @@
 import { Exercise } from "./models/exercise.model";
 
-export default<Exercise[]>[
+export default [
   {
     id: 'e1',
     form: 'Burpee',

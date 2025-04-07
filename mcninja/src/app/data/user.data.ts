@@ -1,4 +1,5 @@
 import exercisesData from "./exercises.data";
+import { Exercise } from "./models/exercise.model";
 import { Technique } from "./models/techinque.model";
 import { User } from "./models/user.model";
 

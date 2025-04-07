@@ -1,1 +1,11 @@
-<p>user works!</p>
+<h1>User Data</h1>
+
+@for (u of users(); track u.id){
+  <p>Name: {{u.nameFirst}} {{u.nameLast}}</p>
+  <p>Mastered Techniques: {{u.userMastered}}</p>
+  <p>Remaining Techniques to master: {{u.userNotMastered}}</p>
+  <p>User Exercises: {{u.userExercises}}</p>
+<hr>
+}
+
+

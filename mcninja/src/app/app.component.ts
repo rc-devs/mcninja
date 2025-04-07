@@ -4,10 +4,11 @@ import { MasteredComponent } from './display-techniques/mastered/mastered.compon
 import { UnmasteredComponent } from './display-techniques/unmastered/unmastered.component';
 import { ByTitleComponent } from './display-techniques/by-title/by-title.component';
 import { ExercisesComponent } from './exercises/exercises.component';
+import { UserComponent } from './user/user.component';
 
 @Component({
   selector: 'app-root',
-  imports: [DisplayTechniquesComponent, MasteredComponent, UnmasteredComponent, ByTitleComponent, ExercisesComponent],
+  imports: [DisplayTechniquesComponent, MasteredComponent, UnmasteredComponent, ByTitleComponent, ExercisesComponent, UserComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
