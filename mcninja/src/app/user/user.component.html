@@ -4,9 +4,10 @@
   <p>Name: {{u.nameFirst}} {{u.nameLast}}</p>
   <p>Mastered Techniques: {{u.userMastered}}</p>
   <p>Remaining Techniques to master: {{u.userNotMastered}}</p>
-  <p>User Exercises: {{u.userExercises}}</p>
+  <p>User Exercises</p>
+  <p>{{u.userExercises}}</p><!-- need to loop over? -->
 <hr>
-<button (click)="onClick(u.userExercises)">Test</button>
+
 }
 
 
