@@ -13,28 +13,24 @@ import { ExerciseService } from '../../shared/exercise-service/exercise-service.
 export class AddExerciseComponent {
   private exercisesService = inject(ExerciseService);
 
-  userInput = <Exercise[]>[]
-  //
+  //userExercises = <Exercise[]>[]
+
 
   addExerciseHandler(name:string, iteration:any, duration:any){
     //add new object to array
-   this.userInput.push({
+   this.exercisesService.exercisesArray.push({
     id: 'test',
     form: name,
     iteration: iteration,
     duration: duration,})
-    console.log(this.userInput) //test log
+    //console.log(this.userExercises) //test log
     console.log(this.exercisesService.exercisesArray) //test log
-
-    //concat arrays
-/*
-    newArray = <Exercise[]> = this.exercisesService.concat(this.userInput) */
 
 
 
     //reset form
 
-   return this.userInput;
+   //return this.exercisesService.exercisesArray;
 
 
   };
