@@ -2,7 +2,7 @@ import { Component, inject, signal } from '@angular/core';
 import exercisesData from '../../data/exercises.data';
 import { FormsModule } from '@angular/forms';
 import { Exercise } from '../../data/models/exercise.model';
-import { ExerciseServiceService } from '../../shared/exercise/exercise-service.service';
+import { ExerciseService } from '../../shared/exercise-service/exercise-service.service';
 
 @Component({
   selector: 'app-add-exercise',
@@ -11,9 +11,10 @@ import { ExerciseServiceService } from '../../shared/exercise/exercise-service.s
   styleUrl: './add-exercise.component.css'
 })
 export class AddExerciseComponent {
-  private exercisesService = inject(ExerciseServiceService);
+  private exercisesService = inject(ExerciseService);
 
   userInput = <Exercise[]>[]
+  //
 
   addExerciseHandler(name:string, iteration:any, duration:any){
     //add new object to array
@@ -26,6 +27,8 @@ export class AddExerciseComponent {
     console.log(this.exercisesService.exercisesArray) //test log
 
     //concat arrays
+/*
+    newArray = <Exercise[]> = this.exercisesService.concat(this.userInput) */
 
 
 

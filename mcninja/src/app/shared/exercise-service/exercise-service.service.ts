@@ -5,7 +5,7 @@ import EXERCISES_DATA from '../../data/exercises.data';
 @Injectable({
   providedIn: 'root'
 })
-export class ExerciseServiceService {
+export class ExerciseService {
   exercisesArray = signal<Exercise[]>(EXERCISES_DATA)
 
   /* getDefaultExercises(){
