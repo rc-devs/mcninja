@@ -13,9 +13,6 @@ import { ExerciseService } from '../../shared/exercise-service/exercise-service.
 export class AddExerciseComponent {
   private exercisesService = inject(ExerciseService);
 
-  //userExercises = <Exercise[]>[]
-
-
   addExerciseHandler(name:string, iteration:any, duration:any){
     //add new object to array
    this.exercisesService.exercisesArray.push({
@@ -23,15 +20,10 @@ export class AddExerciseComponent {
     form: name,
     iteration: iteration,
     duration: duration,})
-    //console.log(this.userExercises) //test log
+
     console.log(this.exercisesService.exercisesArray) //test log
 
-
-
     //reset form
-
-   //return this.exercisesService.exercisesArray;
-
 
   };
 

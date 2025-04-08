@@ -9,13 +9,5 @@ export class ExerciseService {
   //exercisesArray = signal<Exercise[]>(EXERCISES_DATA)
   exercisesArray = EXERCISES_DATA
 
-  /* getDefaultExercises(){
-    return this.exercisesArray;
-  } */
-
-
-
-
-
   constructor() { }
 }
