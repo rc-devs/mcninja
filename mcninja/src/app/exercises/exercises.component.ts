@@ -1,7 +1,8 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { Exercise } from '../data/models/exercise.model';
 import exercisesData from '../data/exercises.data';
 import { AddExerciseComponent } from './add-exercise/add-exercise.component';
+import { ExerciseService } from '../shared/exercise-service/exercise-service.service';
 
 @Component({
   selector: 'app-exercises',
@@ -10,6 +11,10 @@ import { AddExerciseComponent } from './add-exercise/add-exercise.component';
   styleUrl: './exercises.component.css'
 })
 export class ExercisesComponent {
- //exercises = signal<Exercise[]>(exercisesData)
- exercises = signal(exercisesData)
+  exercisesService = inject(ExerciseService);
+
+  exercises = signal(this.exercisesService.exercisesArray) //display exercise array from service
 }
+
+
+
