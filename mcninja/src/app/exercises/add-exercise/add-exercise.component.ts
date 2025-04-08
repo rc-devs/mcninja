@@ -11,7 +11,7 @@ import { ExerciseService } from '../../shared/exercise-service/exercise-service.
 export class AddExerciseComponent {
    exercisesService = inject(ExerciseService);
 
-  addExerciseHandler(name:string, iteration:any, duration:any){
+  addExerciseHandler(name:string, iteration:any, duration:any, form:any){
     //add new object to array
    this.exercisesService.exercisesArray.push({
     id: 'test',
@@ -22,6 +22,7 @@ export class AddExerciseComponent {
     console.log(this.exercisesService.exercisesArray) //test log
 
     //reset form
+    form.reset()
 
 
   };
