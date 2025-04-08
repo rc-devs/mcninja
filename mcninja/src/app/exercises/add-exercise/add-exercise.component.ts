@@ -22,7 +22,9 @@ export class AddExerciseComponent {
     duration: duration,})
     console.log(this.userInput) //test log
 
-    //push new object
+    //concat arrays
+    /* updatedExercise = <Exercise[]> = this.userInput.concat(this.) */
+
 
     //reset form
 
