@@ -6,7 +6,13 @@ import EXERCISES_DATA from '../../data/exercises.data';
   providedIn: 'root'
 })
 export class ExerciseServiceService {
-  exercises = signal<Exercise[]>(EXERCISES_DATA)
+  exercisesArray = signal<Exercise[]>(EXERCISES_DATA)
+
+  /* getDefaultExercises(){
+    return this.exercisesArray;
+  } */
+
+
 
   constructor() { }
 }
