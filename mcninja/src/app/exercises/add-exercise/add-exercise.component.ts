@@ -10,7 +10,7 @@ import exercisesData from '../../data/exercises.data';
 export class AddExerciseComponent {
   exercises = signal(exercisesData)
 
-  addExerciseHandler(name:string, iteration:number, duration:number){
+  addExerciseHandler(name:string, iteration:any, duration:any){
     //add new object to exercisesData array
     /* this.exercises.push({
       id: 'test test test',
