@@ -1,6 +1,8 @@
-import { Component, Input, signal } from '@angular/core';
+import { Component, inject, Input, signal } from '@angular/core';
 import { User } from '../data/models/user.model';
 import userData from '../data/user.data';
+import { ExerciseService } from '../shared/exercise-service/exercise-service.service';
+import { Exercise } from '../data/models/exercise.model';
 
 @Component({
   selector: 'app-user',
@@ -9,11 +11,15 @@ import userData from '../data/user.data';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
+
+ exercisesService = inject(ExerciseService);
+
  users = signal<User[]>(userData)
- userEx = signal({})
+ userEx = signal<Exercise[]>([])
 
- displayExercises(exercises: any){
-  this.userEx = exercises
- }
-
-}
+ displayExercises(){
+  console.log(this.exercisesService.exercisesArray)
+    this.userEx.set(this.exercisesService.exercisesArray)
+  return this.exercisesService.exercisesArray;
+  };
+};
