@@ -15,14 +15,17 @@ export class AddExerciseComponent {
 
   addExerciseHandler(name:string, iteration:any, duration:any){
     //add new object to exercisesData array
-   this.userInput = [{
+   this.userInput.push({
     id: 'test',
     form: name,
     iteration: iteration,
-    duration: duration,}]
+    duration: duration,})
+    console.log(this.userInput) //test log
+
+    //push new object
 
     //reset form
-    console.log(this.userInput)
+
    return this.userInput;
 
 
