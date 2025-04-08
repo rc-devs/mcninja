@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
 import exercisesData from '../../data/exercises.data';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-add-exercise',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './add-exercise.component.html',
   styleUrl: './add-exercise.component.css'
 })
@@ -16,6 +17,9 @@ export class AddExerciseComponent {
       id: 'test test test',
       name:
     }) */
+   console.log(name)
+   console.log(iteration)
+   console.log(duration)
 
     //reset form
 
