@@ -1,5 +1,4 @@
-import { Injectable, signal } from '@angular/core';
-import { Exercise } from '../../data/models/exercise.model';
+import { Injectable } from '@angular/core';
 import EXERCISES_DATA from '../../data/exercises.data';
 
 @Injectable({

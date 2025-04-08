@@ -1,6 +1,4 @@
 import { Component, inject, signal } from '@angular/core';
-import { Exercise } from '../data/models/exercise.model';
-import exercisesData from '../data/exercises.data';
 import { AddExerciseComponent } from './add-exercise/add-exercise.component';
 import { ExerciseService } from '../shared/exercise-service/exercise-service.service';
 
