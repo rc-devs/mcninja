@@ -36,7 +36,7 @@ export class UserComponent {
   console.log(userId)
   console.log(userPassword)
   //run through array, to get object via userID, then check userPassword for match
-  let filteredUser = this.users().filter(u => u.id === userId ) //filter users array to find object with matching id
+  let filteredUser = this.users().filter(u => u.id === userId && u.password === userPassword) //filter users array to find object with matching id
   this.users.set(filteredUser)
 
   console.log(filteredUser)
@@ -44,17 +44,14 @@ export class UserComponent {
 
   console.log(userPassword)
 
-  let test = this.users().filter(p => p.password == userPassword)
-  console.log(test)
-
-  if (this.users().filter(p => p.password == userPassword)){
+  if (this.users().filter(p => p.password == userPassword && p.id === userId)){
     //if match, display user information (set userlogged in to true)
       this.userLoggedIn = true;
       form.reset()
       console.log(this.users()) ;
-  } else {
+  } else if (this.users().filter(p => p.password !== userPassword || p.id !== userId)) {
     //else alert that incorret id or password has been entered
-    alert("You have entere an incorrect id or password")
+    alert("You have entere an incorrect id or password");
     form.reset()
   }
 
