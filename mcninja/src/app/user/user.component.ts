@@ -4,10 +4,11 @@ import userData from '../data/user.data';
 import { ExerciseService } from '../shared/exercise-service/exercise-service.service';
 import { Exercise } from '../data/models/exercise.model';
 import { ExercisesComponent } from '../exercises/exercises.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-user',
-  imports: [ExercisesComponent],
+  imports: [ExercisesComponent, FormsModule],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css'
 })
@@ -16,9 +17,30 @@ export class UserComponent {
  exercisesService = inject(ExerciseService);
  displayEx = false;
  btnText = "Show Exercises"
+ userLoggedIn = false;
 
   //user data
  users = signal<User[]>(userData)
+
+ logOutHandler(){
+  this.userLoggedIn = false;
+ }
+
+ selectUserHandler(form: any, userId:string, userPassword:string){
+  //run through array, to get object via userID, then check userPassword for match
+
+  //if match, display user information (set userlogged in to true)
+    this.userLoggedIn = true;
+
+  //else alert that incorret id or password has been entered
+
+  console.log(form)
+  console.log(userId)
+  console.log(userPassword)
+
+  //reset form
+  form.reset()
+ }
 
   //display exercises based on true/false toggle
  displayExercises(){

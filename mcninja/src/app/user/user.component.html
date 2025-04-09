@@ -1,18 +1,38 @@
-<h1>User Data</h1>
 
-@for (u of users(); track u.id){
-  <p>Name: {{u.nameFirst}} {{u.nameLast}}</p>
-  <p>Mastered Techniques: {{u.userMastered}}</p>
-  <p>Remaining Techniques to master: {{u.userNotMastered}}</p>
 
-  <button (click)="displayExercises()">{{btnText}}</button>
-  @if(displayEx) {
-   <app-exercises></app-exercises>
+@if (!userLoggedIn){
+  <h1>Log In</h1>
+
+  <form #form name="form" (submit)="selectUserHandler(form, userIdInput.value, passwordInput.value)">
+    <label for="userIdInput">User Id: </label>
+      <input #userIdInput type="text" name="userIdInput" placeholder="Enter your user id">
+    <label  for="passwordInput">Password: </label>
+      <input #passwordInput type="text" name="passwordInput" placeholder="Enter your password">
+    <button type="submit">Submit</button>
+  </form>
+
+} @else if (userLoggedIn){ <!-- need to remove for loop when displaying only 1 user -->
+
+  <button (click)="logOutHandler()">Log Out</button>
+
+  @for (u of users(); track u.id){
+    <h1>User Data</h1>
+
+    <p>Name: {{u.nameFirst}} {{u.nameLast}}</p>
+    <p>Mastered Techniques: {{u.userMastered}}</p>
+    <p>Remaining Techniques to master: {{u.userNotMastered}}</p>
+
+    <button (click)="displayExercises()">{{btnText}}</button>
+    @if(displayEx) {
+     <app-exercises></app-exercises>
+    }
+
+  <hr>
+
   }
 
-<hr>
-
 }
+
 
 
 
