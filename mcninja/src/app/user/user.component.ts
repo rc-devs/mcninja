@@ -12,18 +12,19 @@ import { ExercisesComponent } from '../exercises/exercises.component';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-
+  //services and boolean variable
  exercisesService = inject(ExerciseService);
  displayEx = false;
 
+  //user data
  users = signal<User[]>(userData)
- userEx = signal<Exercise[]>([])
 
+  //display exercises based on true/false toggle
  displayExercises(){
-
-    this.displayEx =true;
-  /* console.log(this.exercisesService.exercisesArray)
-    this.userEx.set(this.exercisesService.exercisesArray)
-  return this.exercisesService.exercisesArray; */
+  if (this.displayEx === false){
+      this.displayEx =true;
+    } else if (this.displayEx === true) {
+      this.displayEx = false;
+    }
   };
 };
