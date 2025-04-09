@@ -12,6 +12,11 @@ export class ExercisesComponent {
   exercisesService = inject(ExerciseService);
 
   exercises = signal(this.exercisesService.exercisesArray) //display exercise array from service
+
+  deleteExerciseHandler(id: string){
+    console.log(id)
+    //delete object using id to identify position in array
+  }
 }
 
 
