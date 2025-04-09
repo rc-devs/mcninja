@@ -15,6 +15,7 @@ export class UserComponent {
   //services and boolean variable
  exercisesService = inject(ExerciseService);
  displayEx = false;
+ btnText = "Show Exercises"
 
   //user data
  users = signal<User[]>(userData)
@@ -22,9 +23,11 @@ export class UserComponent {
   //display exercises based on true/false toggle
  displayExercises(){
   if (this.displayEx === false){
+      this.btnText = "Hide Exercises"
       this.displayEx =true;
     } else if (this.displayEx === true) {
       this.displayEx = false;
+      this.btnText = "Show Exercises"
     }
   };
 };
