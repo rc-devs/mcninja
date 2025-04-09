@@ -3,23 +3,27 @@ import { User } from '../data/models/user.model';
 import userData from '../data/user.data';
 import { ExerciseService } from '../shared/exercise-service/exercise-service.service';
 import { Exercise } from '../data/models/exercise.model';
+import { ExercisesComponent } from '../exercises/exercises.component';
 
 @Component({
   selector: 'app-user',
-  imports: [],
+  imports: [ExercisesComponent],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css'
 })
 export class UserComponent {
 
  exercisesService = inject(ExerciseService);
+ displayEx = false;
 
  users = signal<User[]>(userData)
  userEx = signal<Exercise[]>([])
 
  displayExercises(){
-  console.log(this.exercisesService.exercisesArray)
+
+    this.displayEx =true;
+  /* console.log(this.exercisesService.exercisesArray)
     this.userEx.set(this.exercisesService.exercisesArray)
-  return this.exercisesService.exercisesArray;
+  return this.exercisesService.exercisesArray; */
   };
 };
