@@ -14,8 +14,15 @@ export class ExercisesComponent {
   exercises = signal(this.exercisesService.exercisesArray) //display exercise array from service
 
   deleteExerciseHandler(id: string){
-    console.log(id)
+    console.log(id) //logs id of object
     //delete object using id to identify position in array
+
+    let updatedExercises = this.exercises().filter(e  => e.id !== id);
+    console.log(updatedExercises)
+
+  //return new array
+    this.exercises.set(updatedExercises)
+
   }
 }
 
