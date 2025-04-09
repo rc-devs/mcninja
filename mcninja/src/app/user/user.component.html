@@ -11,12 +11,12 @@
     <button type="submit">Submit</button>
   </form>
 
-} @else if (userLoggedIn){ <!-- need to remove for loop when displaying only 1 user -->
+} @else if (userLoggedIn){
 
   <button (click)="logOutHandler()">Log Out</button>
 
-  @for (u of users(); track u.id){
-    <h1>User Data</h1>
+  @for (u of users(); track u.id){ <!-- need to remove for loop; only displaying 1 user -->
+    <h1>Welcome, {{u.nameFirst}} {{u.nameLast}}</h1>
 
     <p>Name: {{u.nameFirst}} {{u.nameLast}}</p>
     <p>Mastered Techniques: {{u.userMastered}}</p>

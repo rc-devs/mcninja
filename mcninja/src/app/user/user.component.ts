@@ -13,33 +13,51 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-  //services and boolean variable
+  //service injection
  exercisesService = inject(ExerciseService);
+
+ //default values
  displayEx = false;
  btnText = "Show Exercises"
  userLoggedIn = false;
 
-  //user data
+//user data
  users = signal<User[]>(userData)
 
+
  logOutHandler(){
+  //surely a way to handle this better, just resetting to default values above
   this.userLoggedIn = false;
+  this.users = signal<User[]>(userData)
+  this.displayEx = false;
  }
 
  selectUserHandler(form: any, userId:string, userPassword:string){
-  //run through array, to get object via userID, then check userPassword for match
-
-  //if match, display user information (set userlogged in to true)
-    this.userLoggedIn = true;
-
-  //else alert that incorret id or password has been entered
-
-  console.log(form)
   console.log(userId)
   console.log(userPassword)
+  //run through array, to get object via userID, then check userPassword for match
+  let filteredUser = this.users().filter(u => u.id === userId ) //filter users array to find object with matching id
+  this.users.set(filteredUser)
 
-  //reset form
-  form.reset()
+  console.log(filteredUser)
+  console.log(this.users())
+
+  console.log(userPassword)
+
+  let test = this.users().filter(p => p.password == userPassword)
+  console.log(test)
+
+  if (this.users().filter(p => p.password == userPassword)){
+    //if match, display user information (set userlogged in to true)
+      this.userLoggedIn = true;
+      form.reset()
+      console.log(this.users()) ;
+  } else {
+    //else alert that incorret id or password has been entered
+    alert("You have entere an incorrect id or password")
+    form.reset()
+  }
+
  }
 
   //display exercises based on true/false toggle
