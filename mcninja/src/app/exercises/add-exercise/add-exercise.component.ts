@@ -9,7 +9,7 @@ import { ExerciseService } from '../../shared/exercise-service/exercise-service.
   styleUrl: './add-exercise.component.css'
 })
 export class AddExerciseComponent {
-   exercisesService = inject(ExerciseService);
+   exercisesService = inject(ExerciseService); //exercises array
 
 
   addExerciseHandler(name:string, iteration:any, duration:any, form:any){
