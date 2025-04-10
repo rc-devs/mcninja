@@ -1,9 +1,9 @@
 <form #form name="form" (submit)="addExerciseHandler(nameInput.value, iterationInput.value, durationInput.value, form)">
   <label for="name">Exercise Name: </label>
-  <input #nameInput name='name' type="text" placeholder="Exercise Name">
+    <input #nameInput name='name' type="text" placeholder="Exercise Name">
   <label for="iteration">Number of Iterations: </label>
-  <input #iterationInput name='iteration' type="number" placeholder="Number of iterations">
+    <input #iterationInput name='iteration' type="number" placeholder="Number of iterations">
   <label for="duration">Duration in Seconds: </label>
-  <input #durationInput name='duration' type="number" placeholder="Duration to complete (seconds)">
+    <input #durationInput name='duration' type="number" placeholder="Duration to complete (seconds)">
   <button type="submit">Submit</button>
 </form>
