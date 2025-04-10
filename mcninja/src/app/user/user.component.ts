@@ -6,10 +6,12 @@ import { Exercise } from '../data/models/exercise.model';
 import { ExercisesComponent } from '../exercises/exercises.component';
 import { FormsModule } from '@angular/forms';
 import { WholeCardComponent } from '../display-techniques/whole-card/whole-card.component';
+import { MasteredComponent } from '../display-techniques/mastered/mastered.component';
+import { UnmasteredComponent } from '../display-techniques/unmastered/unmastered.component';
 
 @Component({
   selector: 'app-user',
-  imports: [ExercisesComponent, FormsModule, WholeCardComponent],
+  imports: [ExercisesComponent, FormsModule, WholeCardComponent, MasteredComponent, UnmasteredComponent],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css'
 })
@@ -18,11 +20,19 @@ export class UserComponent {
  exercisesService = inject(ExerciseService);
 
  //default values (i know this sucks i just need it to work)
+ userLoggedIn = false;
+
+ //boolean to check if component should be displayed
+ displayTech = false;
  displayEx = false;
+ displayMasteredComp = false;
+ displayUnMasteredComp = false;
+
+ //button text for toggle update
  btnText = "Show Exercises"
  techBtnText = "Show All Techniques"
- userLoggedIn = false;
- displayTech = false;
+ masteredBtnText = "Show My Mastered Techniques"
+ unMasteredBtnText = "Show Techniques To Be Mastered"
 
 //user data
  users = signal<User[]>(userData)
@@ -60,14 +70,34 @@ export class UserComponent {
 
  }
 
+ displayMasteredComponent(){
+  if (this.displayMasteredComp === false){
+    this.masteredBtnText = "Hide My Mastered Techniques"
+    this.displayMasteredComp =true;
+  } else if (this.displayMasteredComp === true) {
+    this.masteredBtnText = "Show My Mastered Techniques"
+    this.displayMasteredComp = false;
+  }
+};
+
+displayUnMasteredComponent(){
+  if (this.displayUnMasteredComp === false){
+    this.unMasteredBtnText = "Hide My Mastered Techniques"
+    this.displayUnMasteredComp =true;
+  } else if (this.displayUnMasteredComp === true) {
+    this.unMasteredBtnText = "Show My Mastered Techniques"
+    this.displayUnMasteredComp = false;
+  }
+};
+
   //display exercises based on true/false toggle
  displayExercises(){
   if (this.displayEx === false){
       this.btnText = "Hide Exercises"
       this.displayEx =true;
     } else if (this.displayEx === true) {
-      this.displayEx = false;
       this.btnText = "Show Exercises"
+      this.displayEx = false;
     }
   };
 

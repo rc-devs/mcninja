@@ -20,7 +20,17 @@
 
     <p>Name: {{u.nameFirst}} {{u.nameLast}}</p>
     <p>Mastered Techniques: {{u.userMastered}}</p>
+    <button (click)="displayMasteredComponent()">{{masteredBtnText}}</button>
+    @if (displayMasteredComp){
+      <app-mastered></app-mastered>
+    }
     <p>Remaining Techniques to master: {{u.userNotMastered}}</p>
+    <button (click)="displayUnMasteredComponent()">{{unMasteredBtnText}}</button>
+    @if (displayUnMasteredComp){
+      <app-unmastered></app-unmastered>
+    }
+
+    <br> <!-- just for readability at the moment -->
 
     <button (click)="displayExercises()">{{btnText}}</button>
     <button (click)="displayTechniques()">{{techBtnText}}</button>
@@ -35,7 +45,7 @@
      }
 
   }
-  
+
 }
 
 
