@@ -19,23 +19,19 @@
     <h1>Welcome, {{u.nameFirst}} {{u.nameLast}}</h1>
 
     <p>Name: {{u.nameFirst}} {{u.nameLast}}</p>
-    <p>Mastered Techniques: {{u.userMastered}}</p>
+
     <button (click)="displayMasteredComponent()">{{masteredBtnText}}</button>
-    @if (displayMasteredComp){
-      <app-mastered></app-mastered>
-    }
-    <p>Remaining Techniques to master: {{u.userNotMastered}}</p>
     <button (click)="displayUnMasteredComponent()">{{unMasteredBtnText}}</button>
-    @if (displayUnMasteredComp){
-      <app-unmastered></app-unmastered>
-    }
-
-    <br> <!-- just for readability at the moment -->
-
     <button (click)="displayExercises()">{{btnText}}</button>
     <button (click)="displayTechniques()">{{techBtnText}}</button>
 
     <!-- components go here -->
+    @if (displayMasteredComp){
+      <app-mastered></app-mastered>
+    }
+    @if (displayUnMasteredComp){
+      <app-unmastered></app-unmastered>
+    }
     @if(displayEx) {
      <app-exercises></app-exercises>
      <hr>
