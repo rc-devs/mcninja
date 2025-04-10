@@ -1,20 +1,6 @@
 
+<!-- NOT APPLIED TO CODE -->
 
-@if (!userLoggedIn){
-  <h1>Log In</h1>
-
-  <form #form name="form" (submit)="selectUserHandler(form, userIdInput.value, passwordInput.value)">
-    <label for="userIdInput">User Id: </label>
-      <input #userIdInput type="text" name="userIdInput" placeholder="Enter your user id">
-    <label  for="passwordInput">Password: </label>
-      <input #passwordInput type="text" name="passwordInput" placeholder="Enter your password">
-    <button type="submit">Submit</button>
-  </form>
-
-} @else if (userLoggedIn){
-  <!-- maybe put all this in a 'logged in component' -->
-
-  <button (click)="logOutHandler()">Log Out</button>
 
   @for (u of users(); track u.id){ <!-- need to remove for loop; only displaying 1 user -->
     <h1>Welcome, {{u.nameFirst}} {{u.nameLast}}</h1>
@@ -43,8 +29,5 @@
 
   }
 
-}
 
-
-<hr>
 

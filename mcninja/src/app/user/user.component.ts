@@ -1,17 +1,17 @@
-import { Component, inject, Input, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { User } from '../data/models/user.model';
 import userData from '../data/user.data';
 import { ExerciseService } from '../shared/exercise-service/exercise-service.service';
-import { Exercise } from '../data/models/exercise.model';
 import { ExercisesComponent } from '../exercises/exercises.component';
 import { FormsModule } from '@angular/forms';
 import { WholeCardComponent } from '../display-techniques/whole-card/whole-card.component';
 import { MasteredComponent } from '../display-techniques/mastered/mastered.component';
 import { UnmasteredComponent } from '../display-techniques/unmastered/unmastered.component';
 
+
 @Component({
   selector: 'app-user',
-  imports: [ExercisesComponent, FormsModule, WholeCardComponent, MasteredComponent, UnmasteredComponent],
+  imports: [ FormsModule, UnmasteredComponent, MasteredComponent, WholeCardComponent, ExercisesComponent],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css'
 })
