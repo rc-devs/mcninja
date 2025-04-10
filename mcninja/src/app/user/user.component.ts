@@ -5,10 +5,11 @@ import { ExerciseService } from '../shared/exercise-service/exercise-service.ser
 import { Exercise } from '../data/models/exercise.model';
 import { ExercisesComponent } from '../exercises/exercises.component';
 import { FormsModule } from '@angular/forms';
+import { WholeCardComponent } from '../display-techniques/whole-card/whole-card.component';
 
 @Component({
   selector: 'app-user',
-  imports: [ExercisesComponent, FormsModule],
+  imports: [ExercisesComponent, FormsModule, WholeCardComponent],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css'
 })
@@ -16,10 +17,12 @@ export class UserComponent {
   //service injection
  exercisesService = inject(ExerciseService);
 
- //default values
+ //default values (i know this sucks i just need it to work)
  displayEx = false;
  btnText = "Show Exercises"
+ techBtnText = "Show All Techniques"
  userLoggedIn = false;
+ displayTech = false;
 
 //user data
  users = signal<User[]>(userData)
@@ -67,4 +70,14 @@ export class UserComponent {
       this.btnText = "Show Exercises"
     }
   };
+
+ displayTechniques(){
+  if (this.displayTech === false){
+      this.techBtnText = "Hide Techniques"
+      this.displayTech =true;
+    } else if (this.displayTech === true) {
+      this.displayTech = false;
+      this.techBtnText = "Show Techniques"
+    }
+    };
 };

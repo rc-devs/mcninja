@@ -23,16 +23,21 @@
     <p>Remaining Techniques to master: {{u.userNotMastered}}</p>
 
     <button (click)="displayExercises()">{{btnText}}</button>
+    <button (click)="displayTechniques()">{{techBtnText}}</button>
+
+    <!-- components go here -->
     @if(displayEx) {
      <app-exercises></app-exercises>
+     <hr>
     }
-
-  <hr>
+    @if(displayTech) {
+      <app-whole-card></app-whole-card>
+     }
 
   }
-
+  
 }
 
 
-
+<hr>
 
