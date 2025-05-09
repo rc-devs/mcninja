@@ -7,6 +7,7 @@ export interface Technique {
   description: string,
   execution: string[],
   proTip: string,
+  defaultTip: string,
   video: Video,
   mastered: boolean,
 }
