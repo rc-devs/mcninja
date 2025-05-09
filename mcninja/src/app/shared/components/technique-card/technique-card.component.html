@@ -1,1 +1,21 @@
-<p>technique-card works!</p>
+@for (t of techniqueData(); track t.id){
+  <div class="technique-container">
+  <h2>{{ t.title }}</h2>
+    <p>The {{ t.title }} is a {{ t.belt }} belt technique.</p>
+
+    <p>{{ t.description }}</p>
+    <p>{{ t.execution }}</p>
+  <div class="execution-container">
+    @for (e of t.execution; track e){
+    <li>{{ e }}</li>
+    }
+  </div>
+  <h3>Pro-tip</h3>
+    @if (t.proTip){
+    {{ t.proTip }}
+    } @else {
+    {{ t.defaultTip }}
+    }
+</div>
+}
+
