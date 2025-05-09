@@ -8,8 +8,7 @@ import { MasteredComponent } from './features/techniques/mastered/mastered.compo
 import { UnmasteredComponent } from './features/techniques/unmastered/unmastered.component';
 
 export const routes: Routes = [
-
-  {path: 'main', redirectTo: 'applayout', pathMatch: 'full'},
+  { path: 'main', redirectTo: 'applayout', pathMatch: 'full' },
   {
     path: 'applayout',
     component: ApplayoutComponent,
@@ -29,7 +28,7 @@ export const routes: Routes = [
     ],
   },
   {
-        path: '**',
-        component: PageNotFoundComponent,
-      },
+    path: '**',
+    component: PageNotFoundComponent,
+  },
 ];
